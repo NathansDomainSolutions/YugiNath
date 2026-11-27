@@ -1,0 +1,33 @@
+# Tiny real run: ygo-agent installed, CPU is enough. Checks every piece works,
+# says nothing about deck strength. Writes only under runs/smoke/.
+
+[run]
+name = "smoke"
+rounds = 1
+champion = "runs/smoke/champion.ydk"
+start_deck = "decks/champion.ydk"
+history_dir = "runs/smoke/history"
+results_dir = "runs/smoke/results"
+runs_dir = "runs/smoke"
+
+[mutation]
+candidates = 2
+
+[scoring]
+halving_start_games = 4
+accept_games = 8
+
+[duel]
+backend = "ygoenv"
+max_envs = 8
+xla_device = "cpu"
+
+[train]
+backend = "ygo-agent"
+iterations = 1
+local_num_envs = 4
+num_actor_threads = 1
+num_steps = 32
+num_minibatches = 2
+eval_episodes = 4
+xla_device = "cpu"

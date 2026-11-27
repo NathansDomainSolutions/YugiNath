@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yuginath"
+version = "0.1.0"
+description = "A Yu-Gi-Oh! bot that trains by self-play and evolves its own decklist."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []  # the loop itself is standard-library only; ygo-agent brings JAX etc.
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+yuginath = "yuginath.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["yuginath*"]

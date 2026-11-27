@@ -1,0 +1,17 @@
+# Bulky or machine-specific: kept out of normal git (see README "Where data lives")
+runs/
+external/
+*.flax_model
+*.tflite
+*.pt
+*.sqlite
+*.yrp
+checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
