@@ -1,0 +1,25 @@
+# Plumbing test with no rules engine at all: the "fake" backend flips weighted
+# coins instead of dueling, and training is skipped. Runs anywhere with
+# Python 3.11+. Writes only under runs/smoke-fake/.
+
+[run]
+name = "smoke-fake"
+rounds = 2
+champion = "runs/smoke-fake/champion.ydk"
+start_deck = "decks/champion.ydk"
+history_dir = "runs/smoke-fake/history"
+results_dir = "runs/smoke-fake/results"
+runs_dir = "runs/smoke-fake"
+
+[mutation]
+candidates = 4
+
+[scoring]
+halving_start_games = 20
+accept_games = 100
+
+[duel]
+backend = "fake"
+
+[train]
+backend = "none"

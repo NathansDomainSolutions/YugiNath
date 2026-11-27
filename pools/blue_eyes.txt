@@ -1,0 +1,81 @@
+# Card pool for the Blue-Eyes deck search.
+# Format: <code> <main|extra> [max copies]  # name
+# Built from ygo-agent's tested decks (assets/deck/*.ydk), which its README says can be
+# combined freely: every Blue-Eyes main, extra and side card, plus generic staples that
+# appear in 3+ different tested archetypes. Banlist limits are applied on top of this.
+
+# --- Blue-Eyes main + side deck ---
+89631139  main   # Blue-Eyes White Dragon
+38517737  main   # Blue-Eyes Alternative White Dragon
+45467446  main   # Dragon Spirit of White
+65681983  main   # Crossout Designator
+23434538  main   # Maxx "C"
+71039903  main   # The White Stone of Ancients
+45644898  main   # Master with Eyes of Blue
+79814787  main   # The White Stone of Legend
+8240199   main   # Sage with Eyes of Blue
+97268402  main   # Effect Veiler
+2295440   main   # One for One
+6853254   main   # Return of the Dragon Lords
+38120068  main   # Trade-In
+39701395  main   # Cards of Consonance
+41620959  main   # Dragon Shrine
+48800175  main   # The Melody of Awakening Dragon
+43898403  main   # Twin Twisters
+63356631  main   # Phoenix Wing Wind Blast
+8233522   main   # Ally of Justice Cycle Reader
+14558127  main   # Ash Blossom & Joyous Spring
+56399890  main   # The Fabled Catsith
+53129443  main   # Dark Hole
+25789292  main   # Forbidden Chalice
+43455065  main   # Magical Spring
+11109820  main   # Xyz Universe
+
+# --- generic main-deck staples ---
+24224830  main   # Called by the Grave
+10045474  main   # Infinite Impermanence
+27204311  main   # Nibiru, the Primal Being
+94145021  main   # Droll & Lock Bird
+25311006  main   # Triple Tactics Talent
+84211599  main   # Pot of Prosperity
+33854624  main   # Bystial Magnamhut
+6637331   main   # Bystial Druiswurm
+18144506  main   # Harpie's Feather Duster
+12580477  main   # Raigeki
+91800273  main   # Dimension Shifter
+49238328  main   # Pot of Extravagance
+35261759  main   # Pot of Desires
+84749824  main   # Solemn Warning
+24299458  main   # Forbidden Droplet
+81439173  main   # Foolish Burial
+75500286  main   # Gold Sarcophagus
+
+# --- Blue-Eyes extra deck ---
+40908371  extra  # Azure-Eyes Silver Dragon
+59822133  extra  # Blue-Eyes Spirit Dragon
+50954680  extra  # Crystal Wing Synchro Dragon
+83994433  extra  # Stardust Spark Dragon
+33698022  extra  # Black Rose Moonlight Dragon
+39030163  extra  # Galaxy-Eyes Full Armor Photon Dragon
+31801517  extra  # Number 62: Galaxy-Eyes Prime Photon Dragon
+2978414   extra  # Number 46: Dragluon
+63767246  extra  # Number 38: Hope Harbinger Dragon Titanic Galaxy
+64332231  extra  # Hieratic Sun Dragon Overlord of Heliopolis
+10443957  extra  # Cyber Dragon Infinity
+41999284  extra  # Linkuriboh
+
+# --- generic extra-deck monsters ---
+84815190  extra  # Baronne de Fleur
+29301450  extra  # S:P Little Knight
+4280258   extra  # Apollousa, Bow of the Goddess
+65741786  extra  # I:P Masquerena
+86066372  extra  # Accesscode Talker
+98127546  extra  # Underworld Goddess of the Closed World
+93039339  extra  # Super Starslayer TY-PHON - Sky Crisis
+22850702  extra  # Chaos Angel
+2857636   extra  # Knightmare Phoenix
+38342335  extra  # Knightmare Unicorn
+27548199  extra  # Borreload Savage Dragon
+73580471  extra  # Black Rose Dragon
+45112597  extra  # Worldsea Dragon Zealantis
+90448279  extra  # Divine Arsenal AA-ZEUS - Sky Thunder

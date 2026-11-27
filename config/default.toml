@@ -1,0 +1,48 @@
+# Full settings: real duels in ygo-agent's ygoenv, PPO training on one GPU.
+# Every key not set here falls back to yuginath/config.py.
+
+[run]
+name = "blue-eyes"
+rounds = 3                       # each round: train, make candidates, score, maybe replace
+seed = 0
+champion = "decks/champion.ydk"  # best deck so far; overwritten when a candidate wins
+start_deck = "decks/start/BlueEyes_ygo-agent.ydk"
+history_dir = "decks/history"    # every accepted champion, kept in git
+results_dir = "results"          # per-round JSON + history.csv, kept in git
+runs_dir = "runs"                # checkpoints, duel logs, temp files: NOT in git
+
+[rules]
+banlist = "banlists/lflist.conf"
+banlist_name = "2026.10 TCG"     # or "2026.10 OCG"
+
+[pool]
+file = "pools/blue_eyes.txt"
+
+[mutation]
+candidates = 8                   # variants per round
+k_weights = [0.7, 0.2, 0.1]      # chance of swapping 1, 2 or 3 cards
+extra_prob = 0.25                # chance a swap lands in the extra deck
+
+[scoring]
+halving_start_games = 50         # 8 candidates x 50, then 4 x 100, 2 x 200, 1 x 400
+accept_games = 400               # fresh head-to-head games for the final check
+accept_threshold = 0.55          # replace the champion only at 55%+
+
+[duel]
+backend = "ygoenv"
+ygo_agent_dir = "external/ygo-agent"
+python = "external/venv/bin/python"
+max_envs = 64                    # parallel duels per batch
+
+[train]
+backend = "ygo-agent"
+ygo_agent_dir = "external/ygo-agent"
+python = "external/venv/bin/python"
+iterations = 50                  # PPO updates per round (128 steps x 32 envs each)
+local_num_envs = 16
+num_actor_threads = 2
+num_minibatches = 8
+learning_rate = 1e-4
+actor_device_ids = [0]
+learner_device_ids = [0]
+eval_episodes = 32
